@@ -1,0 +1,17 @@
+galaxy_info:
+  author: Suzuki Shunsuke
+  description: Install git on Ubuntu
+  license: license (GPLv2, CC-BY, etc)
+  min_ansible_version: 1.2
+  github_branch: master
+
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+
+  galaxy_tags:
+  - git
+
+dependencies:
+- role: suzuki-shunsuke.apt

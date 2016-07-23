@@ -1,0 +1,21 @@
+---
+# tasks file for git-ubuntu
+- block:
+  - name: Install software-properties-common
+    apt: 
+      name: software-properties-common
+      update_cache: yes
+      install_recommends: no
+    become: "{{ git_nonroot }}"
+  - name: Add APT repositories(ppa:git-core/ppa)
+    apt_repository:
+      repo: ppa:git-core/ppa
+    become: "{{ git_nonroot }}"
+  when: git_use_ppa
+- name: Install git
+  apt: 
+    name: git
+    update_cache: yes
+    install_recommends: no
+    state: "{{ git_upgrade | ternary('latest', 'present') }}"
+  become: "{{ git_nonroot }}"

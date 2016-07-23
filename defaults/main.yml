@@ -1,0 +1,4 @@
+---
+# defaults file for git-ubuntu
+git_use_ppa: no
+git_upgrade: no

@@ -2,4 +2,4 @@
 - hosts: localhost
   connection: local
   roles:
-    - { role: ansible-git-ubuntu, git_use_ppa: yes, git_upgrade: yes }
+  - { role: ansible-git-ubuntu, git_use_ppa: yes, git_upgrade: yes }

@@ -13,5 +13,4 @@ galaxy_info:
   galaxy_tags:
   - git
 
-dependencies:
-- role: suzuki-shunsuke.apt
+dependencies: []

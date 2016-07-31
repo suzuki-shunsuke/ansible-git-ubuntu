@@ -22,7 +22,7 @@ Role Variables
 Dependencies
 ------------
 
-* [suzuki-shunsuke.apt module](https://galaxy.ansible.com/suzuki-shunsuke/apt/)
+Nothing.
 
 Example Playbook
 ----------------

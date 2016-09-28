@@ -30,7 +30,9 @@ Example Playbook
 ```yaml
 - hosts: servers
   roles:
-  - { role: suzuki-shunsuke.git-ubuntu, git_use_ppa: yes , git_upgrade: no }
+  - role: suzuki-shunsuke.git-ubuntu
+    git_use_ppa: yes
+    git_upgrade: no
 ```
 
 License

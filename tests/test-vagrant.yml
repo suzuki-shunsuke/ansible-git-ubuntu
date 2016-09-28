@@ -1,6 +1,5 @@
 ---
-- hosts: localhost
-  connection: local
+- hosts: default
   roles:
   - role: ansible-git-ubuntu
     git_use_ppa: yes

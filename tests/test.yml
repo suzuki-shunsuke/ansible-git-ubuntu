@@ -3,9 +3,47 @@
   connection: local
   roles:
   - role: ansible-git-ubuntu
+    git_use_ppa: no
+    git_upgrade: no
+  tasks:
+  - command: git --version
+    register: result
+    changed_when: false
+  - debug:
+      var: result
+- hosts: localhost
+  connection: local
+  roles:
+  - role: ansible-git-ubuntu
+    git_use_ppa: no
+    git_upgrade: yes
+  tasks:
+  - command: git --version
+    register: result
+    changed_when: false
+  - debug:
+      var: result
+- hosts: localhost
+  connection: local
+  roles:
+  - role: ansible-git-ubuntu
+    git_use_ppa: yes
+    git_upgrade: no
+  tasks:
+  - command: git --version
+    register: result
+    changed_when: false
+  - debug:
+      var: result
+- hosts: localhost
+  connection: local
+  roles:
+  - role: ansible-git-ubuntu
     git_use_ppa: yes
     git_upgrade: yes
   tasks:
   - command: git --version
     register: result
-  - debug: var=result
+    changed_when: false
+  - debug:
+      var: result

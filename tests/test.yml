@@ -1,6 +1,5 @@
 ---
-- hosts: localhost
-  connection: local
+- hosts: default
   roles:
   - role: ansible-git-ubuntu
     git_use_ppa: no
@@ -11,8 +10,7 @@
     changed_when: false
   - debug:
       var: result
-- hosts: localhost
-  connection: local
+- hosts: default
   roles:
   - role: ansible-git-ubuntu
     git_use_ppa: no
@@ -23,8 +21,7 @@
     changed_when: false
   - debug:
       var: result
-- hosts: localhost
-  connection: local
+- hosts: default
   roles:
   - role: ansible-git-ubuntu
     git_use_ppa: yes
@@ -35,8 +32,7 @@
     changed_when: false
   - debug:
       var: result
-- hosts: localhost
-  connection: local
+- hosts: default
   roles:
   - role: ansible-git-ubuntu
     git_use_ppa: yes
